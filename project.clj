@@ -1,5 +1,5 @@
-(defproject ccw/ccw.server "0.1.0"
+(defproject ccw/ccw-server "0.1.0"
   :description "Library that must be placed in your project classpath when you connect to it via CCW over nrepl"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.3.0"]])
+  :eval-in-leiningen true)
