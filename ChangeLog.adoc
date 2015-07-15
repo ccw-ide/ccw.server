@@ -1,0 +1,16 @@
+= ccw.server library ChangeLog
+Laurent Petit <laurent dot petit at gmail dot com>
+:sectanchors:
+:sectlinks:
+:source-highlighter: coderay
+:experimental:
+:toc: left
+:toc-title: ChangeLog
+:toclevels: 0
+
+== ccw.server 0.2.0
+
+`0.2.0` released on July 14, 2015
+
+- Support for Clojure 1.7.0 (`ccw.server` relied inappropriately on the order returned by (seq a-map) e.g. in `find-symbol`)
+
