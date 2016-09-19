@@ -444,8 +444,8 @@
   "Return a sequence of matching completions given a prefix string 
    and an optional current namespace."
   ([prefix] (completions* prefix *ns*))
-  ([prefix ns & {:keys #{filter} 
-                 :or    {filter ccw.debug.serverrepl/starts-with-filter}}]
+  ([prefix ns & {:keys [filter]
+                 :or   {filter ccw.debug.serverrepl/starts-with-filter}}]
      (for [[kind completions] (potential-completions prefix ns)
            [match-symbol match-object :as completion] completions
            :let [f (filter-completion (name match-symbol) prefix filter)]
@@ -460,10 +460,10 @@
    and an optional current namespace."
   ([prefix] (completions prefix *ns*))
   ([prefix ns limit
-    & {:keys #{filter comparator renderer} 
-       :or    {filter ccw.debug.serverrepl/starts-with-filter
-               comparator compare
-               renderer :completion}}]
+    & {:keys [filter comparator renderer]
+       :or   {filter ccw.debug.serverrepl/starts-with-filter
+              comparator compare
+              renderer :completion}}]
     (map renderer
          (take limit
                (sort-by
