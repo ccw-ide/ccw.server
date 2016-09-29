@@ -8,6 +8,12 @@ Laurent Petit <laurent dot petit at gmail dot com>
 :toc-title: ChangeLog
 :toclevels: 0
 
+== ccw.server 0.2.1
+`0.2.1` released on September 30, 2016
+
+- Support for Clojure 1.9.0 (fix bad destructuring code in defns)
+
+
 == ccw.server 0.2.0
 
 `0.2.0` released on July 14, 2015
